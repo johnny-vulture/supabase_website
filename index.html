@@ -1,10 +1,81 @@
 <!DOCTYPE html>
-<html>
-    <head>
-
-    </head>
-    <body>
-        <img src="./back.jpeg" style="background: fixed;">
-        <h1 class="h1">StrongDog Chat</h1>
-    </body>
-</html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Chat Site</title>
+  <!--Bootstrap CDN-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!--Custom CSS-->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <!--Header-->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Bootstrap Chat Site</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Chat Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Profile</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!--Main Content-->
+    <main>
+      <div class="row">
+        <!--Chat Room List-->
+        <div class="col-md-3 chat-rooms">
+          <h3>Chat Rooms</h3>
+          <ul>
+            <li><a href="#">General</a></li>
+            <li><a href="#">Games</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Music</a></li>
+          </ul>
+        </div>
+        <!--Chat Area-->
+        <div class="col-md-9 chat-area">
+          <h3>General Chat Room</h3>
+          <div class="message-box">
+            <div class="message">
+              <span class="username">John:</span> Hi everyone!
+            </div>
+            <div class="message">
+              <span class="username">Sarah:</span> Hey John, what's up?
+            </div>
+          </div>
+          <form class="message-form">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Enter your message...">
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <!--Footer-->
+    <footer>
+      <div class="row">
+        <div class="col-md-12">
+          <p>&copy; Bootstrap Chat Site 2023</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!--Bootstrap JS CDN-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap"></script>
