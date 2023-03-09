@@ -42,7 +42,7 @@ const logInSubmitted = (event) => {
   supabase.auth
     .signIn({ email, password })
     .then((response) => {
-      response.error ? alert(response.error.message) : setToken(response)
+      response.error ? alert(response.error.message) : alert("somethin wrong :(")
     })
     .catch((err) => {
       alert(err.response.text)
