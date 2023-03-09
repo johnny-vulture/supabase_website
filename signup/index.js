@@ -1,6 +1,6 @@
-var SUPABASE_URL = 'https://lrtbfcifsxbyzzsmqxaf.supabase.co'
+var SUPABASE_URL = 'https://jlvewxlubvutfftsrrcq.supabase.co'
 var SUPABASE_KEY =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxydGJmY2lmc3hieXp6c21xeGFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzgxNTY0MTUsImV4cCI6MTk5MzczMjQxNX0.2mctAAMLP01FVr3WigeKlXn0k_HWXMDXcOnmHFqcxOE'
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpsdmV3eGx1YnZ1dGZmdHNycmNxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzgzODUyNjYsImV4cCI6MTk5Mzk2MTI2Nn0.4nZ46D6yU8RhLJNO1QmdF5oDvRrIZrjVRnP8zmUmkes'
 
 var supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY)
 window.userToken = null
@@ -51,29 +51,4 @@ const logInSubmitted = (event) => {
 
 const fetchUserDetails = () => {
   alert(JSON.stringify(supabase.auth.user()))
-}
-
-const logoutSubmitted = (event) => {
-  event.preventDefault()
-
-  supabase.auth
-    .signOut()
-    .then((_response) => {
-      document.querySelector('#access-token').value = ''
-      document.querySelector('#refresh-token').value = ''
-      alert('Logout successful')
-    })
-    .catch((err) => {
-      alert(err.response.text)
-    })
-}
-
-function setToken(response) {
-  if (response.user.confirmation_sent_at && !response?.session?.access_token) {
-    alert('Confirmation Email Sent')
-  } else {
-    document.querySelector('#access-token').value = response.session.access_token
-    document.querySelector('#refresh-token').value = response.session.refresh_token
-    alert('Logged in as ' + response.user.email)
-  }
 }
