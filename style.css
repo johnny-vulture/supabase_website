@@ -23,6 +23,6 @@
   .app
   {
     background-color: black;
-    width: fit-content;
-    height: fit-content;
+    width:auto;
+    height:auto;
   }
