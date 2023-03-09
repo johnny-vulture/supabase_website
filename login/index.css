@@ -1,0 +1,13 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: rgb(233, 0, 0);
+  }
+  
+  label {
+    margin: 0.5em;
+  }
+  
+  .section {
+    margin: 1em;
+  }
