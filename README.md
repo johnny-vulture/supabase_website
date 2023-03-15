@@ -1,4 +1,5 @@
 I didn't recieve the supabase invite - Andrew. (also please get better spelling)
+Yes, I re invited U
 
 # CONTRIBUTORS
 Okie Josh, Maxwell, Andrew, Max(Me)
