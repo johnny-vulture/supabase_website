@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: sans-serif;
+  background-color: rgb(50, 50, 50);
+  color: white;
+}
+
+.chatframe {
+  display: flex;
+  position: relative;
+  padding: 5px;
+  background-color: rgb(70, 70, 70);
+  left: 50vw;
+  top: 2em;
+  flex-direction: column;
+  transform: translateX(-50%);
+  width: 75vw;
+  height: 75vh;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.author {
+  font-size: 1.25em;
+  font-weight: 800;
+  position: relative;
+  top: 2%;
+  left: 2%;
+  background-color: transparent;
+}
+
+.message {
+  font-size: 1.25em;
+  position: relative;
+  top: 2%;
+  left: 2%;
+  background-color: transparent;
+}
